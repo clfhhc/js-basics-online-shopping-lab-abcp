@@ -19,6 +19,15 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+  if (cart.length>0) {
+    var text="In your cart, you have";
+    switch ()
+    for (let i=0; i<cart.length; i++) {
+      
+    }
+  } else {
+    console.log("Your shopping cart is empty.");
+  }
 }
 
 function total() {
