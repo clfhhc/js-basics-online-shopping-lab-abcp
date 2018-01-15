@@ -21,9 +21,10 @@ function viewCart() {
   // write your code here
   if (cart.length>0) {
     var text="In your cart, you have";
-    switch ()
     for (let i=0; i<cart.length; i++) {
-      
+      if (cart.length===1) {
+        text+=` ${cart[i].keys()[0]}
+      }
     }
   } else {
     console.log("Your shopping cart is empty.");
