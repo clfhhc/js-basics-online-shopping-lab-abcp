@@ -49,8 +49,9 @@ function total() {
   // write your code here
   var totalValue=0;
   for (let i=0; i<cart.length; i++) {
-    
+    totalValue+=cart[i][Object.keys(cart[i])[0]];
   }
+  return totalValue;
 }
 
 function removeFromCart(item) {
