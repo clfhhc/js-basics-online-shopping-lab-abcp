@@ -21,11 +21,25 @@ function viewCart() {
   // write your code here
   if (cart.length>0) {
     var text="In your cart, you have";
-    for (let i=0; i<cart.length; i++) {
-      if (cart.length===1) {
-        text+=` ${Object.keys(cart[i])[0]} at 
+    if (cart.length===1) {
+      text+=` ${Object.keys(cart[0])[0]} at $${cart[i][Object.keys(cart[0])[0]]}`;
+    } else if (cart.length===2) {
+      text+=` ${Object.keys(cart[0])[0]} at $${cart[i][Object.keys(cart[0])[0]]}`;
+      text+=" and";
+      text+=` ${Object.keys(cart[0])[0]} at $${cart[i][Object.keys(cart[0])[0]]}`;
+    } else {
+      for (let i=0; i<cart.length; i++) {
+        if (i!=cart.length-1) {
+          text+=` ${Object.keys(cart[0])[0]} at $${cart[i][Object.keys(cart[0])[0]]}`;
+          text+=",";
+        } else {
+          text+=" and";
+          text+=` ${Object.keys(cart[0])[0]} at $${cart[i][Object.keys(cart[0])[0]]}`;
+        }
       }
     }
+    text+=".";
+    console.log(text);
   } else {
     console.log("Your shopping cart is empty.");
   }
