@@ -61,7 +61,7 @@ function removeFromCart(item) {
   while (i<cart.length && indicator) {
     if (cart[i].hasOwnProperty(item)) {
       indicator=false;
-      cart=[...indicator.slice(0,i),...indicator.slice(i+1)];
+      cart=[...cart.slice(0,i),...cart.slice(i+1)];
     }
     i++;
   }
