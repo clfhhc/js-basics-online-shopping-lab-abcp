@@ -59,9 +59,16 @@ function removeFromCart(item) {
   var indicator=true;
   var i=0;
   while (i<cart.length && indicator) {
-    if (cart[i])
+    if (cart[i].hasOwnProperty(item)) {
+      indicator=false;
+      cart=[...indicator.slice(0,i),...indicator.slice(i+1)];
+    }
     i++;
   }
+  if (!indicator) {
+    console.log("That item is not in your cart.");
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
