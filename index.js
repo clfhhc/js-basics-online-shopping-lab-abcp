@@ -23,7 +23,7 @@ function viewCart() {
     var text="In your cart, you have";
     for (let i=0; i<cart.length; i++) {
       if (cart.length===1) {
-        text+=` ${cart[i].keys()[0]}
+        text+=` ${Object.keys(cart[i])[0]} at 
       }
     }
   } else {
